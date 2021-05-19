@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        * {
+            background-color: rgb(174, 194, 214);
+        }
+
+        h2 {
+            text-align: center;
+            font-style: italic;
+            color: #0d2985;
+        }
+
+        footer {
+            width: 100%;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        footer ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        footer ul li p,
+        footer ul li a {
+            list-style-type: none;
+            margin-bottom: 5px;
+            font-size: 13px;
+            color: #0d2985;
+        }
+
+        p {
+            color: #391647;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>yaelim's diary💖</h2>
+    <br>
+    <h2 style="text-align: left;color: #391647;">" {{diary.title}} "</h2>
+    <p>date : {{diary.pub_date}}</p>
+    <p>{{diary.body}}</p>
+    <footer>
+        <hr />
+        <ul>
+            <li>
+                <p>copyright ⓒ 2020 All rights reserved by yaelim.</p>
+            </li>
+            <li>
+                <a href="mailto:yaelim1122@likelion.org" target="_top">📧 Mail me : yaelim1122@likelion.org</a>
+            </li>
+        </ul>
+    </footer>
+</body>
+
+</html>
+{% endblock %}
